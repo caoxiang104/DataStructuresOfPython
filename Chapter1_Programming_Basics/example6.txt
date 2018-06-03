@@ -1,0 +1,5 @@
+LastName HourlyWage HoursWorked
+Bob 4 80
+Ann 8 160
+Jack 6 120
+Lee 12 260
