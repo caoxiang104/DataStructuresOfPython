@@ -8,6 +8,7 @@ import time
 import random
 
 
+
 class Profiler(object):
     def test(self, function, lyst=None, size=10,
              unique=True, comp=True, exch=True, trace=False):

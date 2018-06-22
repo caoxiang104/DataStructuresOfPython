@@ -17,17 +17,23 @@ class Array(object):
     def __iter__(self):
         return iter(self._items)
 
+    # def __getitem__(self, item):
+    #     if item < 0 or item >= self._logicalSize:
+    #         raise IndexError
+    #     else:
+    #         return self._items[item]
+
     def __getitem__(self, item):
-        if item < 0 or item >= self._logicalSize:
-            raise IndexError
-        else:
-            return self._items[item]
+        return self._items[item]
+
+    # def __setitem__(self, key, value):
+    #     if key < 0 or key >= self._logicalSize:
+    #         raise IndexError
+    #     else:
+    #         self._items[key] = value
 
     def __setitem__(self, key, value):
-        if key < 0 or key >= self._logicalSize:
-            raise IndexError
-        else:
-            self._items[key] = value
+        self._items[key] = value
 
     def size(self):
         return self._logicalSize
