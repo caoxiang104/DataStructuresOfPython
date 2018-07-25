@@ -126,13 +126,13 @@ class LinkedBST(AbstractionCollection):
         def recurse(node):
             # New item is less, go left until spot is found
             if item < node.data:
-                if node.left == None:
+                if node.left is None:
                     node.left = BSTNode(item)
                 else:
                     recurse(node.left)
             # New item is greater or equal,
             # go right until spot is found
-            elif node.right == None:
+            elif node.right is None:
                 node.right = BSTNode(item)
             else:
                 recurse(node.right)
@@ -267,26 +267,13 @@ class LinkedBST(AbstractionCollection):
 def main():
     tree = LinkedBST()
     print("Adding D B A C F E G")
-    tree.add("D")
-    tree.add("B")
-    tree.add("A")
-    tree.add("C")
-    tree.add("F")
-    tree.add("E")
-    tree.add("G")
-    print("\nString:\n" + str(tree))
-    print("__iter__:", ",".join(tree.__iter__()))
-    print("postorder:", ",".join(tree.postorder()))
-    print("inorder:", ",".join(tree.inorder()))
-    print("preorder:", ",".join(tree.preorder()))
-    print("levelorder:", ",".join(tree.levelorder()))
-    tree.remove("E")
-    print("\nString:\n" + str(tree))
-    print("height:", tree.height())
-    print("Is balance?", tree.isBlance())
-
-    print("Range find B-F:\n")
-    print(tree.rangeFind("B", "F"))
+    tree.add(5)
+    tree.add(3)
+    tree.add(6)
+    tree.add(2)
+    tree.add(4)
+    tree.add(7)
+    print(tree)
 
 
 if __name__ == "__main__":
